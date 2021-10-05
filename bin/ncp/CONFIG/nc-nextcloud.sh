@@ -22,7 +22,9 @@ install()
   # Optional packets for Nextcloud and Apps
   apt-get update
   $APTINSTALL lbzip2 iputils-ping jq wget
-  $APTINSTALL -t $RELEASE php-smbclient exfat-fuse exfat-utils                  # for external storage
+  #$APTINSTALL -t $RELEASE php-smbclient exfat-fuse exfat-utils                  # for external storage
+  # TODO php-sbmbclient?
+  $APTINSTALL -t $RELEASE exfat-fuse exfat-utils                  # for external storage
   $APTINSTALL -t $RELEASE php${PHPVER}-exif                                     # for gallery
   $APTINSTALL -t $RELEASE php${PHPVER}-gmp                                      # for bookmarks
   $APTINSTALL -t $RELEASE php-bcmath                                            # for LDAP
